@@ -31,42 +31,33 @@ What is included in NISL CI Demo?
 - **Email Templates Module in Admin Area:** A Email Template module to manage "Sign Up" & "Forgot Password" Email content from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
 - **Settings Module in Admin Area:** A basic settings module to manage website level settings from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
 
-
+***************************************************************************
 Additional Files or Directories added on the top of Fresh CodeIgniter code.
----------------------------------------------------------------------------
-
-      /             limitless.zip (must be removed from the actual project)
-      /           	nisl_ci_demo.sql (to be restored in the database)
-      application/config/             email.php (for email configuration) 
-	  
-      application/controllers/		  admin/<9-controllers> (contains all controllers of admin area)
-	  application/controllers/		  Authentication.php (for users side authentication)
-	  application/controllers/ 		  Home.php (Basic controller for front-side)
-	  
-	  application/core/				  MY_Controller.php (base controller to be used globally by entire system)
-	  application/core/				  Admin_Controller.php (another base controller derived from MY_Controller which will contain all common methods to be used from admin side controllers)
-	  application/core/				  Frontend_Controller.php (another base controller derived from MY_Controller which will contain all common methods to be used from users side controllers)
-	  application/core/				  MY_Model.php (base model to be used by all the models)
-
-	  application/helpers/			  admin_helper.php (for admin related common functions to be used from anywhere in the code)
-	  application/helpers/			  general_helper.php (for common general  functions to be used from anywhere in the code)
-	  application/helpers/			  mail_helper.php (for common mail related functions to be used from anywhere in the code)
-	  application/helpers/			  theme_helper.php (for common theme related functions to be used from anywhere in the code)
-	  application/helpers/			  time_helper.php (for common time related functions to be used from anywhere in the code)
-	  application/helpers/			  general_helper.php (for common users related functions to be used from anywhere in the code)
-	  
-	  application/language/			  english/english_lang.php (contains the words/sentences for English language)
-	  
-	  application/libraries/		  Template.php (used in the front-end user side for templating & theme feature)
-
-	  application/models/			  10 Models (for different entities)
-	  
-	  application/views/			  admin/<multiple folders & files for admin views>
-	  application/views/			  themes/default/ (all front-end side views are managed in this as default theme)
-	  application/views/			  themes/jupiter/ (one sample theme created which is different from default just to have the theme concept. If there is no theme in actual project, this folder can be removed completely)
-	  
-	  assets/ 						  admin/ (all admin related assets are added here)
-	  assets/ 						  themes/default (all default theme front-end side assets are added here)
-	  assets/ 						  themes/jupiter (all jupiter theme front-end side assets are added here)
+***************************************************************************
+- **/limitless.zip (must be removed from the actual project)
+- **/nisl_ci_demo.sql (to be restored in the database)
+- **application/config/email.php:** (for email configuration) 
+- **application/controllers/admin/<9-controllers>:** (contains all controllers of admin area)
+- **application/controllers/Authentication.php:** (for users side authentication)
+- **application/controllers/Home.php:** (Basic controller for front-side)
+- **application/core/MY_Controller.php:** (base controller to be used globally by entire system)
+- **application/core/Admin_Controller.php:** (another base controller derived from MY_Controller which will contain all common methods to be used from admin side controllers)
+- **application/core/Frontend_Controller.php:** (another base controller derived from MY_Controller which will contain all common methods to be used from users side controllers)
+- **application/core/MY_Model.php:** (base model to be used by all the models)
+- **application/helpers/admin_helper.php:** (for admin related common functions to be used from anywhere in the code)
+- **application/helpers/general_helper.php:** (for common general  functions to be used from anywhere in the code)
+- **application/helpers/mail_helper.php:** (for common mail related functions to be used from anywhere in the code)
+- **application/helpers/theme_helper.php:** (for common theme related functions to be used from anywhere in the code)
+- **application/helpers/time_helper.php:** (for common time related functions to be used from anywhere in the code)
+- **application/helpers/general_helper.php:** (for common users related functions to be used from anywhere in the code)
+- **application/language/english/english_lang.php:** (contains the words/sentences for English language)
+- **application/libraries/Template.php:** (used in the front-end user side for templating & theme feature)
+- **application/models/<10 Models Files>:** (for different entities)
+- **application/views/admin/<multiple folders & files for admin views>:**
+- **application/views/themes/default/:** (all front-end side views are managed in this as default theme)
+- **application/views/themes/jupiter/:** (one sample theme created which is different from default just to have the theme concept. If there is no theme in actual project, this folder can be removed completely)
+- **assets/admin/:** (all admin related assets are added here)
+- **assets/themes/default:** (all default theme front-end side assets are added here)
+- **assets/themes/jupiter:** (all jupiter theme front-end side assets are added here)
 	  
 	  
