@@ -29,7 +29,9 @@ What is included in NISL CI Demo?
 - **Users Module in Admin Area:** User Management module with possible information. It can be used as a base & can be extended as per the project requirement.
 - **Roles Module in Admin Area:** A basic role module to manage roles & user permissions based on the roles. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
 - **Email Templates Module in Admin Area:** A Email Template module to manage "Sign Up" & "Forgot Password" Email content from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
-- **Settings Module in Admin Area:** A basic settings module to manage website level settings from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
+- **Settings Module in Admin Area:** A basic settings module to manage website level settings from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it .
+- **Authentication in users Area:** Sign Up, Login, Forgot Password, Remember Me.
+- **Multiple Theme concept in users Area:** Default theme & a sample(Jupiter) theme as reference.
 
 ***************************************************************************
 Additional Files or Directories added on the top of Fresh CodeIgniter code.
