@@ -36,8 +36,8 @@ What is included in NISL CI Demo?
 ***************************************************************************
 Additional Files or Directories added on the top of Fresh CodeIgniter code.
 ***************************************************************************
-- **/limitless.zip (must be removed from the actual project)
-- **/nisl_ci_demo.sql (to be restored in the database)
+- **/limitless.zip:** (must be removed from the actual project)
+- **/nisl_ci_demo.sql:** (to be restored in the database)
 - **application/config/email.php:** (for email configuration) 
 - **application/controllers/admin/<9-controllers>:** (contains all controllers of admin area)
 - **application/controllers/Authentication.php:** (for users side authentication)
