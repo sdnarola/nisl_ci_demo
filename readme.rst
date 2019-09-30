@@ -1,70 +1,72 @@
-###################
-What is CodeIgniter
-###################
+#####################
+What is NISL CI Demo?
+#####################
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+The NISL CI Demo is kind of a starter kit to help the developers 
+to build web sites using CodeIngiter MVC Framework. Its goal is to enable developers to develop any CodeIgniter project from scratch by using this demo as a base so that they don't need to develop some of the basic functionalities every time. It uses the CodeIgniter best practices to be followed, so that the developers can refer & follow the same throughout the project to make the project more flexible for future. It has some basic moduled pre-developed which can be inherited for all similar kind of modules. 
 
 *******************
-Release Information
+System Requirements
 *******************
-
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
-
-**************************
-Changelog and New Features
-**************************
-
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
-
-*******************
-Server Requirements
-*******************
-
 PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Codeigniter version 3.x.x is recommended.
 
 ************
 Installation
 ************
+- Clone or download this demo to your server.
+- Rename it to your project name. 
+- Database SQL (nisl_ci_demo.sql) is included at the code root folder. Create a database with this sql file.
+- Change the config.php & databases.php accordingly. 
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
 
-*******
-License
-*******
+*********************************
+What is included in NISL CI Demo?
+*********************************
+- **Authentication in Admin Area:** Login, Forgot Password, Remember Me, Edit Profile, Change Password. 
+  SignUp, Login, Forgot Password, Remember Me features for normal users. 
+- **CRUD Modules in Admin Area:** Two CRUD modules (Categories, Projects) with basic features like search & pagination. These can be used as reference. Any new CRUD Modules can be created quickly by using these modules as base.
+- **Users Module in Admin Area:** User Management module with possible information. It can be used as a base & can be extended as per the project requirement.
+- **Roles Module in Admin Area:** A basic role module to manage roles & user permissions based on the roles. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
+- **Email Templates Module in Admin Area:** A Email Template module to manage "Sign Up" & "Forgot Password" Email content from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
+- **Settings Module in Admin Area:** A basic settings module to manage website level settings from the admin area. This module can be extended as per the project requirement or can be removed completely if there is no need of it. 
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
 
-*********
-Resources
-*********
+Additional Files or Directories added on the top of Fresh CodeIgniter code.
+---------------------------------------------------------------------------
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+      /             limitless.zip (must be removed from the actual project)
+      /           	nisl_ci_demo.sql (to be restored in the database)
+      application/config/             email.php (for email configuration) 
+	  
+      application/controllers/		  admin/<9-controllers> (contains all controllers of admin area)
+	  application/controllers/		  Authentication.php (for users side authentication)
+	  application/controllers/ 		  Home.php (Basic controller for front-side)
+	  
+	  application/core/				  MY_Controller.php (base controller to be used globally by entire system)
+	  application/core/				  Admin_Controller.php (another base controller derived from MY_Controller which will contain all common methods to be used from admin side controllers)
+	  application/core/				  Frontend_Controller.php (another base controller derived from MY_Controller which will contain all common methods to be used from users side controllers)
+	  application/core/				  MY_Model.php (base model to be used by all the models)
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+	  application/helpers/			  admin_helper.php (for admin related common functions to be used from anywhere in the code)
+	  application/helpers/			  general_helper.php (for common general  functions to be used from anywhere in the code)
+	  application/helpers/			  mail_helper.php (for common mail related functions to be used from anywhere in the code)
+	  application/helpers/			  theme_helper.php (for common theme related functions to be used from anywhere in the code)
+	  application/helpers/			  time_helper.php (for common time related functions to be used from anywhere in the code)
+	  application/helpers/			  general_helper.php (for common users related functions to be used from anywhere in the code)
+	  
+	  application/language/			  english/english_lang.php (contains the words/sentences for English language)
+	  
+	  application/libraries/		  Template.php (used in the front-end user side for templating & theme feature)
 
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+	  application/models/			  10 Models (for different entities)
+	  
+	  application/views/			  admin/<multiple folders & files for admin views>
+	  application/views/			  themes/default/ (all front-end side views are managed in this as default theme)
+	  application/views/			  themes/jupiter/ (one sample theme created which is different from default just to have the theme concept. If there is no theme in actual project, this folder can be removed completely)
+	  
+	  assets/ 						  admin/ (all admin related assets are added here)
+	  assets/ 						  themes/default (all default theme front-end side assets are added here)
+	  assets/ 						  themes/jupiter (all jupiter theme front-end side assets are added here)
+	  
+	  
