@@ -16,7 +16,24 @@ class MY_Controller extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->lang->load('english');		
+		$this->lang->load('english');
 	}
 
+	/**
+	 * Set the page title.
+	 * @param str $page_title The title to be set.
+	 *
+	 * @return str  The page title.
+	 */
+	public function set_page_title($page_title)
+	{
+		if (strpos(current_full_url(), '/admin') == true)
+		{
+			$this->page_title = get_settings('company_name').' | Admin Panel | '.$page_title;
+		}
+		else
+		{
+			$this->page_title = get_settings('company_name').' | '.$page_title;
+		}
+	}
 }

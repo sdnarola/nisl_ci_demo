@@ -18,7 +18,7 @@ class Emails extends Admin_Controller
 	 */
 	public function index()
 	{
-		$this->page_title = 'Email Templates';
+		$this->set_page_title('Email Templates');
 
 		if (!has_permissions('email_templates', 'view'))
 		{
@@ -41,7 +41,7 @@ class Emails extends Admin_Controller
 	 */
 	public function email_template($id = '')
 	{
-		$this->page_title = 'Email Templates | Edit';
+		$this->set_page_title('Email Templates | Edit');
 
 		if (!has_permissions('email_templates', 'edit'))
 		{

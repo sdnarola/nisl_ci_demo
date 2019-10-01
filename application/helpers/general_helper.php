@@ -202,25 +202,6 @@ function is_active_controller($controller)
 }
 
 /**
- * Gets the page title.
- *
- * @return str  The page title.
- */
-function get_page_title()
-{
-	$CI = &get_instance();
-
-	if (strpos(current_full_url(), '/admin') == true)
-	{
-		return get_settings('company_name').' | Admin Panel | '.$CI->page_title;
-	}
-	else
-	{
-		return get_settings('company_name').' | '.$CI->page_title;
-	}
-}
-
-/**
  * Sets the notification alert on different evets performed.
  *
  * @param str  $type     The type

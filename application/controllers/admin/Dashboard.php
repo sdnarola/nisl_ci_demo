@@ -16,7 +16,7 @@ class Dashboard extends Admin_Controller
 	 */
 	public function index()
 	{
-		$this->page_title = _l('dashboard');
+		$this->set_page_title(_l('dashboard'));
 
 		$data['content'] = $this->load->view('admin/dashboard/index', '', TRUE);
 		$this->load->view('admin/layouts/index', $data);

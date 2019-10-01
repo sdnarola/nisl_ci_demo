@@ -69,7 +69,7 @@ class Authentication extends My_Controller
 			redirect(site_url());
 		}
 
-		$this->page_title = 'Login';
+		$this->set_page_title('Login');
 		$this->template->load('index', 'content', 'authentication/login_signup');
 	}
 
@@ -121,7 +121,7 @@ class Authentication extends My_Controller
 			}
 		}
 
-		$this->page_title = 'Sign Up';
+		$this->set_page_title('Sign Up');
 		$this->template->load('index', 'content', 'authentication/login_signup');
 	}
 
@@ -151,7 +151,7 @@ class Authentication extends My_Controller
 	 */
 	public function forgot_password()
 	{
-		$this->page_title = _l('forgot_password');
+		$this->set_page_title(_l('forgot_password'));
 
 		if (is_user_logged_in())
 		{
@@ -202,7 +202,7 @@ class Authentication extends My_Controller
 			redirect(site_url());
 		}
 
-		$this->page_title = _l('reset_password');
+		$this->set_page_title(_l('reset_password'));
 
 		if (!$this->Authentication_model->can_reset_password($user_id, $new_pass_key))
 		{

@@ -8,7 +8,7 @@
 <!-- Auto Logout after 15 mins (15*60=900 seconds) of inactivity -->
 <meta http-equiv="refresh" content="900;url=<?php echo admin_url('authentication/logout'); ?>" />
 
-<title><?php echo get_page_title(); ?></title>
+<title><?php echo $this->page_title; ?></title>
 
 <!-- Global stylesheets -->
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -16,7 +16,6 @@
 <link href="<?php echo base_url('assets/admin/css/bootstrap.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/admin/css/core.css'); ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo base_url('assets/admin/css/components.css'); ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo base_url('assets/admin/css/colors.css'); ?>" rel="stylesheet" type="text/css">
 <!-- /global stylesheets -->
 
 <style type="text/css">
@@ -27,58 +26,6 @@ padding: 5px;
 height: 35px;
 border-radius: 3px;
 }	
-
-.error
-{
-	color:red;
-}
-
-.sort
-{
-	color: black;
-}
-
-.input-group-addon 
-{
-	padding: 6px 12px;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 1;
-	color: #555;
-	text-align: center;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-}
-
-.input-group-addon, .input-group-btn
-{
-	width: 1%;
-	white-space: nowrap;
-	vertical-align: middle;
-}
-
-.input-group .form-control, .input-group-addon, .input-group-btn
-{
-	display: table-cell;
-}
-
-.input-group 
-{
-	position: relative;
-	display: table;
-	border-collapse: separate;
-}
-.btn-info.active.focus, .btn-info.active:focus, .btn-info.active:hover, .btn-info:active.focus, .btn-info:active:focus, .btn-info:active:hover, .open>.dropdown-toggle.btn-info.focus, .open>.dropdown-toggle.btn-info:focus, .open>.dropdown-toggle.btn-info:hover
-{
-	color: #fff;
-	background-color: #269abc;
-	border-color: #1b6d85;
-}
-
-.btn-toolbar-container-out 
-{
-	margin-left: -10px;
-}
 
 .btn-bottom-toolbar 
 {
@@ -123,7 +70,7 @@ border-radius: 3px;
 <!-- select box -->
 <script type="text/javascript" src="<?php echo base_url('assets/admin/js/core/libraries/jquery_ui/interactions.min.js'); ?>"></script>
 <script type="text/javascript" src="<?php echo base_url('assets/admin/js/plugins/forms/selects/select2.min.js'); ?>"></script>
-<script type="text/javascript" src="<?php echo base_url('assets/admin/js/pages/form_select2.js'); ?>"></script>
+
 <!-- select box -->
 
 <script type="text/javascript" src="<?php echo base_url('assets/admin/js/plugins/notifications/jgrowl.min.js'); ?>"></script>
@@ -198,7 +145,12 @@ $.validator.setDefaults({
 });
 
 
-$(function() { 
+$(function() {
+
+// Default initialization for dropdown select
+$('.select').select2({
+    minimumResultsForSearch: Infinity
+}); 
 
 //datatables default settings
 $.extend($.fn.dataTable.defaults, {

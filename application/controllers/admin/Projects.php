@@ -18,7 +18,7 @@ class Projects extends Admin_Controller
 	 */
 	public function index()
 	{
-		$this->page_title = _l('projects');
+		$this->set_page_title(_l('projects'));
 
 		if (!has_permissions('projects', 'view'))
 		{
@@ -37,7 +37,7 @@ class Projects extends Admin_Controller
 	 */
 	public function add()
 	{
-		$this->page_title = _l('projects').' | '._l('add');
+		$this->set_page_title(_l('projects').' | '._l('add'));
 
 		if (!has_permissions('projects', 'create'))
 		{
@@ -77,7 +77,7 @@ class Projects extends Admin_Controller
 	 */
 	public function edit($id = '')
 	{
-		$this->page_title = _l('projects').' | '._l('edit');
+		$this->set_page_title(_l('projects').' | '._l('edit'));
 
 		if (!has_permissions('projects', 'edit'))
 		{

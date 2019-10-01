@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?php echo get_page_title(); ?></title>
+    <title><?php echo $this->page_title; ?></title>
     <link rel="stylesheet" href="<?php echo base_url('assets/themes/default/css/bootstrap.min.css'); ?>" >
     <link rel="stylesheet" href="<?php echo base_url('assets/themes/default/css/style.css'); ?>" >
     <script type="text/javascript" src="<?php echo base_url('assets/admin/js/core/libraries/jquery.min.js'); ?>"></script>

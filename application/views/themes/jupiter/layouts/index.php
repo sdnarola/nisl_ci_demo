@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title><?php echo get_page_title(); ?></title>
+    <title><?php echo $this->page_title; ?></title>
     <link rel="stylesheet" href="<?php echo base_url('assets/themes/jupiter/css/bootstrap.min.css'); ?>" >
     <link rel="stylesheet" href="<?php echo base_url('assets/themes/jupiter/css/style.css'); ?>" >
 </head>

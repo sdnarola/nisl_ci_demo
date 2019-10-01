@@ -9,7 +9,7 @@ class Home extends Frontend_Controller
 
 	public function index()
 	{
-		$this->page_title = 'Home';
+		$this->set_page_title('Home');
 
 		$data = [
 			'heading' => 'Hello, world!',
@@ -29,12 +29,8 @@ class Home extends Frontend_Controller
 				]
 			]
 		];
-		
+
 		$this->template->load('index', 'content', 'home', $data);
 	}
 
-
-	public function test(){
-		echo "sucess";
-	}
 }

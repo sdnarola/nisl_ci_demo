@@ -19,8 +19,8 @@ class Profile extends Admin_Controller
 	 */
 	public function edit()
 	{
-		$this->page_title = _l('edit_profile');
-		$id               = get_loggedin_user_id();
+		$this->set_page_title(_l('edit_profile'));
+		$id = get_loggedin_user_id();
 
 		if ($id)
 		{

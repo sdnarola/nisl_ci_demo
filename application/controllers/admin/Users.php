@@ -20,7 +20,7 @@ class Users extends Admin_Controller
 	 */
 	public function index()
 	{
-		$this->page_title = _l('users');
+		$this->set_page_title(_l('users'));
 
 		if (!has_permissions('users', 'view'))
 		{
@@ -41,7 +41,7 @@ class Users extends Admin_Controller
 	 */
 	public function add()
 	{
-		$this->page_title = 'Users | Add';
+		$this->set_page_title(_l('users').' | '._l('add'));
 
 		if (!has_permissions('users', 'create'))
 		{
@@ -115,7 +115,7 @@ class Users extends Admin_Controller
 	 */
 	public function edit($id = '')
 	{
-		$this->page_title = _l('users').' | '._l('edit');
+		$this->set_page_title(_l('users').' | '._l('edit'));
 
 		if (!has_permissions('users', 'edit'))
 		{

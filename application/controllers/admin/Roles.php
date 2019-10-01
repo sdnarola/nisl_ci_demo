@@ -20,7 +20,7 @@ class Roles extends Admin_Controller
 	 */
 	public function index()
 	{
-		$this->page_title = _l('roles');
+		$this->set_page_title(_l('roles'));
 
 		if (!has_permissions('roles', 'view'))
 		{
@@ -39,7 +39,7 @@ class Roles extends Admin_Controller
 	 */
 	public function add()
 	{
-		$this->page_title = _l('roles').' | '._l('add');
+		$this->set_page_title(_l('roles').' | '._l('add'));
 
 		if (!has_permissions('roles', 'create'))
 		{
@@ -78,7 +78,7 @@ class Roles extends Admin_Controller
 	 */
 	public function edit($id = '')
 	{
-		$this->page_title = _l('roles').' | '._l('edit');
+		$this->set_page_title(_l('roles').' | '._l('edit'));
 
 		if (!has_permissions('roles', 'edit'))
 		{
