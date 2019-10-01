@@ -7,11 +7,6 @@
  */
 function get_loggedin_user_id()
 {
-	if (!is_user_logged_in())
-	{
-		return false;
-	}
-
 	return get_instance()->session->userdata('user_id');
 }
 
@@ -24,11 +19,6 @@ function get_loggedin_user_id()
  */
 function get_loggedin_info($info)
 {
-	if (!is_user_logged_in())
-	{
-		return false;
-	}
-
 	return get_instance()->session->userdata($info);
 }
 

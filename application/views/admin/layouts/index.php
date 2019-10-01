@@ -273,8 +273,8 @@ switches.forEach(function(html) {
 							<div class="media">
 								<div class="media-body">
 									<span class="media-heading text-semibold">
-										<?php  _el('welcome').'&nbsp;'.get_loggedin_info('username').'&nbsp;'; ?>
-										<a style="color: white;" href="<?php echo admin_url('authentication/logout'); ?>" align="padding-right"><i class="icon-switch2" data-popup="tooltip" data-placement="right"  title="<?php _el('logout')?>"></i></a>
+										<?php echo _l('welcome').'&nbsp;'.get_loggedin_info('username').'&nbsp;'; ?>
+										<a style="color: white;" href="<?php echo admin_url('authentication/logout'); ?>" align="padding-right"><i class="icon-switch2" data-popup="tooltip" data-placement="top"  title="<?php _el('logout')?>"></i></a>
 									</span>
 								</div>
 							</div>
