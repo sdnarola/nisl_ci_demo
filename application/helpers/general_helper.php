@@ -20,7 +20,7 @@ function is_admin_logged_in()
  */
 function is_user_logged_in()
 {
-	if (get_instance()->session->has_userdata('user_logged_in'))
+	if (get_instance()->session->has_userdata('user_logged_in') && get_instance()->session->userdata('is_admin') == 0)
 	{
 		return get_user_info(get_instance()->session->userdata('user_id'), 'is_active');
 	}
