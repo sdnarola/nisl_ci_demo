@@ -26,8 +26,7 @@ class Authentication extends My_Controller
 			$email    = $this->input->post('email');
 			$password = $this->input->post('password');
 			$remember = $this->input->post('remember');
-
-			$user = $this->Authentication_model->login($email, $password, $remember);
+			$user     = $this->Authentication_model->login($email, $password, $remember);
 
 			if (is_array($user) && isset($user['user_inactive']))
 			{

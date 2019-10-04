@@ -19,6 +19,13 @@ Installation
 - Database SQL (nisl_ci_demo.sql) is included at the code root folder. Create a database with this sql file.
 - Change the config.php & databases.php accordingly. 
 
+- **Admin Login details:**
+- admin@narola.email / admin
+- author@narola.email / author
+- editor@narola.email / editor
+- visitor@narola.email / visitor
+  
+
 
 *********************************
 What is included in NISL CI Demo?
@@ -51,7 +58,7 @@ Additional Files or Directories added on the top of Fresh CodeIgniter code.
 - **application/helpers/mail_helper.php:** (for common mail related functions to be used from anywhere in the code)
 - **application/helpers/theme_helper.php:** (for common theme related functions to be used from anywhere in the code)
 - **application/helpers/time_helper.php:** (for common time related functions to be used from anywhere in the code)
-- **application/helpers/general_helper.php:** (for common users related functions to be used from anywhere in the code)
+- **application/helpers/user_helper.php:** (for common users related functions to be used from anywhere in the code)
 - **application/language/english/english_lang.php:** (contains the words/sentences for English language)
 - **application/libraries/Template.php:** (used in the front-end user side for templating & theme feature)
 - **application/models/<10 Models Files>:** (for different entities)
