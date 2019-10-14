@@ -43,22 +43,16 @@
 				<div class="form-group">
                     <small class="req text-danger">* </small>
 					<label for="email">Email</label>
-					<input type="email" class="form-control" placeholder="<?php _el('email') ?>" name="email" id="email" value="<?php if (get_cookie('email_cookie')!=null){ echo get_cookie('email_cookie');}?>" >
+					<input type="email" class="form-control" placeholder="<?php _el('email') ?>" name="email" id="email" >
 				</div>
 				<div class="form-group">
                     <small class="req text-danger">* </small>
 					<label for="password">Password</label>
-					<input type="password" class="form-control" placeholder="<?php _el('password') ?>" name="password" id="password" value="<?php if (get_cookie('password_cookie')!= null)
-                    {
-                    echo get_cookie('password_cookie');
-                    }?>">
+					<input type="password" class="form-control" placeholder="<?php _el('password') ?>" name="password" id="password" >
 				</div>
                 <div class="form-group">
                     <label class="checkbox-inline">
-                        <input type="checkbox" class="styled" name="remember" <?php if (get_cookie('email_cookie')!=null)
-                        {
-                            echo "checked";
-                        } ?>>
+                        <input type="checkbox" class="styled" name="remember" >
                         <?php _el('remember_me') ?>
                     </label>
                     <a class="pull-right" href="<?php echo site_url('authentication/forgot_password'); ?>"><?php _el('forgot_password') ?></a>

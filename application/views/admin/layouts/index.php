@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Auto Logout after 15 mins (15*60=900 seconds) of inactivity -->
-<meta http-equiv="refresh" content="900;url=<?php echo admin_url('authentication/logout'); ?>" />
+<meta http-equiv="refresh" content="900;url=<?php echo admin_url('authentication/autologout'); ?>" />
 
 <title><?php echo $this->page_title; ?></title>
 

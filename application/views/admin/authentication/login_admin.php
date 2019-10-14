@@ -10,26 +10,20 @@
 		<div class="form-group has-feedback has-feedback-left">
 			<div class="form-control-feedback"><i class="icon-envelop text-muted"></i>
 			</div>
-			<input type="email" class="form-control" placeholder="<?php _el('email') ?>" name="email" id="email" value="<?php if (get_cookie('email_cookie')!=null){ echo get_cookie('email_cookie');}?>" autocomplete="off">
+			<input type="email" class="form-control" placeholder="<?php _el('email') ?>" name="email" id="email" >
 			
 		</div>
 		<div class="form-group has-feedback has-feedback-left">
 			<div class="form-control-feedback">
 				<i class="icon-lock2 text-muted"></i>
 			</div>
-			<input type="password" class="form-control" placeholder="<?php _el('password') ?>" name="password" id="password" value="<?php if (get_cookie('password_cookie')!= null)
-			{
-			echo get_cookie('password_cookie');
-			}?>">
+			<input type="password" class="form-control" placeholder="<?php _el('password') ?>" name="password" id="password" >
 		</div>
 		<div class="form-group login-options">
 			<div class="row">
 				<div class="col-sm-6">
 					<label class="checkbox-inline">
-						<input type="checkbox" class="styled" name="remember" <?php if (get_cookie('email_cookie')!=null)
-						{
-							echo "checked";
-						} ?>>
+						<input type="checkbox" class="styled" name="remember" >
 						<?php _el('remember_me') ?>
 					</label>
 				</div>

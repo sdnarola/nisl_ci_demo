@@ -181,4 +181,17 @@ class Authentication extends My_Controller
 		$this->Authentication_model->logout();
 		redirect(admin_url('authentication'));
 	}
+
+	/**
+	 * Does auto logout
+	 */
+	public function autologout()
+	{
+		if (get_cookie('autologin', true)) //If user has set REMEMBER ME
+		{
+			redirect($this->agent->referrer()); //redirect to the same page from where autologin is called.
+		}
+
+		$this->logout();
+	}
 }

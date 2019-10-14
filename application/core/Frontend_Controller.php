@@ -11,6 +11,7 @@ class Frontend_Controller extends My_Controller
 	public function __construct()
 	{
 		parent::__construct();
+
 		//$this->load->library('template');   loaded in autoload instead here.
 		//$this->load->helper('theme');   loaded in autoload instead here.
 
@@ -22,7 +23,8 @@ class Frontend_Controller extends My_Controller
 			if (strpos(current_full_url(), '/authentication') === false)
 			{
 				redirect_after_login_to_current_url();
-			}	
+			}
+
 			redirect(site_url('authentication'));
 		}
 	}
